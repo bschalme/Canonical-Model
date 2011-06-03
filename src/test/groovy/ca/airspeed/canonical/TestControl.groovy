@@ -16,18 +16,14 @@ limitations under the License.
 */
 package ca.airspeed.canonical
 
-import groovy.transform.ToString;
+import static org.junit.Assert.*
+import org.junit.Test
 
-@ToString(includeNames = true)
-class Control {
-	Integer id
-	String name
-	String value
-	
-	boolean equals(Object obj) {
-		// if (this == obj) return true
-		if (!(obj instanceof Control)) return false
-		Control other = (Control)obj
-		return other.id.equals(id) && other.name.equals(name) && other.value.equals(value)
+class TestControl {
+	@Test
+	void testForEquality() {
+		Control thisOne = new Control(id:1, name:"name.this", value:"2011-05-31")
+		Control thatOne = new Control(id:1, name:"name.this", value:"2011-05-31")
+		assertEquals "Expected to be equal;", thisOne, thatOne
 	}
 }

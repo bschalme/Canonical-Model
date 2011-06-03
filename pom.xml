@@ -8,6 +8,7 @@
 	<artifactId>canonical-model</artifactId>
 	<name>Canonical Model</name>
 	<properties>
+		<groovy.eclipse.compiler.version>0.5.1-SNAPSHOT</groovy.eclipse.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<packaging>jar</packaging>
@@ -15,15 +16,14 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
-			<artifactId>groovy</artifactId>
-			<version>1.8.0-rc-3</version>
+			<artifactId>groovy-all</artifactId>
+			<version>1.8.0</version>
 			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-eclipse-compiler</artifactId>
-			<version>0.5.1-SNAPSHOT</version>
+			<version>${groovy.eclipse.compiler.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
@@ -62,6 +62,17 @@
 						<configuration>
 							<sources>
 								<source>src/main/groovy</source>
+							</sources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>add-test-source</id>
+						<phase>generate-test-sources</phase>
+						<goals>
+							<goal>add-test-source</goal>
+						</goals>
+						<configuration>
+							<sources>
 								<source>src/test/groovy</source>
 							</sources>
 						</configuration>
@@ -79,7 +90,7 @@
 					<dependency>
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-eclipse-compiler</artifactId>
-						<version>0.5.1-SNAPSHOT</version>
+						<version>${groovy.eclipse.compiler.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
