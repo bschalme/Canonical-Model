@@ -8,9 +8,12 @@
 	<artifactId>canonical-model</artifactId>
 	<name>Canonical Model</name>
 	<properties>
-		<groovy.eclipse.compiler.version>0.5.1-SNAPSHOT</groovy.eclipse.compiler.version>
+		<groovy.eclipse.compiler.version>2.6.0-01</groovy.eclipse.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<dependencies>
@@ -30,7 +33,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.8.2</version>
+			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
