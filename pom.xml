@@ -8,20 +8,19 @@
 	<artifactId>canonical-model</artifactId>
 	<name>Canonical Model</name>
 	<properties>
-		<groovy.eclipse.compiler.version>2.6.0-01</groovy.eclipse.compiler.version>
+		<groovy.eclipse.compiler.version>2.7.0-01</groovy.eclipse.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
-			<version>1.8.0</version>
-			<type>jar</type>
+			<version>2.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>

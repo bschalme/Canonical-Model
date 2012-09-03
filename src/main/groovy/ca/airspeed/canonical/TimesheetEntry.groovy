@@ -23,6 +23,7 @@ class TimesheetEntry {
 	String id
 	String sourceSystemName
 	String username
+	Date workDate
 	Date startTime
 	Date endTime
 	Integer durationMinutes
@@ -32,4 +33,5 @@ class TimesheetEntry {
 	String jobName
 	String itemName
 	String notes
+	String billableStatus
 }
