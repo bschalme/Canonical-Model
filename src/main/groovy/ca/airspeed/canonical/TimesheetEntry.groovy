@@ -16,22 +16,45 @@
  */
 package ca.airspeed.canonical
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+
 import groovy.transform.ToString;
 
 @ToString(includeNames = true)
 class TimesheetEntry {
+	@NotBlank
 	String id
+	
 	String sourceSystemName
+	
+	@NotBlank
 	String username
+	
+	@NotNull
 	Date workDate
+	
 	Date startTime
 	Date endTime
+	
+	@NotNull
+	@Range(min=0L, max=1440L)
 	Integer durationMinutes
+	
 	InetAddress ipIn
 	InetAddress ipOut
+	
+	@NotBlank
 	String customerName
+	
+	@NotBlank
 	String jobName
+	
+	@NotBlank
 	String itemName
+	
 	String notes
 	String billableStatus
 }

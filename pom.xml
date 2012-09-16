@@ -10,6 +10,8 @@
 	<properties>
 		<groovy.eclipse.compiler.version>2.7.0-01</groovy.eclipse.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<slf4j.version>1.6.6</slf4j.version>
+		<spring.version>3.1.2.RELEASE</spring.version>
 	</properties>
 	<prerequisites>
 		<maven>3.0</maven>
@@ -30,9 +32,42 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.0.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -86,7 +121,7 @@
 				<version>2.3.1</version>
 				<configuration>
 					<compilerId>groovy-eclipse-compiler</compilerId>
-					<verbose>true</verbose>
+					<verbose>false</verbose>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -98,11 +133,12 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.8</version>
+				<version>2.9</version>
 				<configuration>
 					<additionalProjectnatures>
 						<projectnature>org.eclipse.jdt.groovy.core.groovyNature</projectnature>
 					</additionalProjectnatures>
+					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -186,4 +222,9 @@
 			<url>file://J:/.m2/repository</url>
 		</repository>
 	</distributionManagement>
+	<scm>
+		<url>scm:git:file://localhost/.</url>
+		<connection>scm:git:file://localhost/.</connection>
+		<developerConnection>scm:git:file://localhost/.</developerConnection>
+	</scm>
 </project>
