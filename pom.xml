@@ -222,8 +222,8 @@
 		</repository>
 	</distributionManagement>
 	<scm>
-		<url>scm:git:file://localhost/.</url>
-		<connection>scm:git:file://localhost/.</connection>
-		<developerConnection>scm:git:file://localhost/.</developerConnection>
+		<url>scm:git:https://github.com/bschalme/Canonical-Model</url>
+		<connection>scm:git:https://github.com/bschalme/Canonical-Model</connection>
+		<developerConnection>scm:git:https://github.com/bschalme/Canonical-Model</developerConnection>
 	</scm>
 </project>
