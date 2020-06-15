@@ -235,5 +235,6 @@
 			<attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
