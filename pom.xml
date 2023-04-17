@@ -10,7 +10,7 @@
 		<groovy.eclipse.compiler.version>2.7.0-01</groovy.eclipse.compiler.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<slf4j.version>1.6.6</slf4j.version>
-		<spring.version>5.3.26</spring.version>
+		<spring.version>5.3.27</spring.version>
 	</properties>
 	<prerequisites>
 		<maven>3.0</maven>
